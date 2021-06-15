@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GnuLib", "Gnulib.vcxproj", "{EFC8C00D-34C2-414F-989E-98EB8E8CE78D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFC8C00D-34C2-414F-989E-98EB8E8CE78D}.Debug|x86.ActiveCfg = Debug|Win32
+		{EFC8C00D-34C2-414F-989E-98EB8E8CE78D}.Debug|x86.Build.0 = Debug|Win32
+		{EFC8C00D-34C2-414F-989E-98EB8E8CE78D}.Release|x86.ActiveCfg = Release|Win32
+		{EFC8C00D-34C2-414F-989E-98EB8E8CE78D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {430D42BF-6C0C-462D-A87F-43427CA8A60C}
+	EndGlobalSection
+EndGlobal

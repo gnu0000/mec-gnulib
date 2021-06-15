@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>GnuLib</ProjectName>
+    <ProjectGuid>{EFC8C00D-34C2-414F-989E-98EB8E8CE78D}</ProjectGuid>
+    <RootNamespace>GnuLib</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28127.55</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;WINVER=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <BrowseInformationFile>$(IntDir)</BrowseInformationFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>Debug\Gnulib_Debug.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>if not defined ITIINC echo You need to set the ITIINC environment variable!
+if not defined ITILIB echo You need to set the ITILIB environment variable!
+if defined ITIINC copy "$(ProjectDir)"\gnu*.h %25ITIINC%25\
+if defined ITILIB copy $(OutDir)*.lib %25ITILIB%25\
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(ITIINC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_LIB;WINVER=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/Gnulib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Release\Gnulib.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile />
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>if not defined ITIINC echo You need to set the ITIINC environment variable!
+if not defined ITILIB echo You need to set the ITILIB environment variable!
+if defined ITIINC copy $(ProjectDir)gnu*.h %25ITIINC%25\
+if defined ITILIB copy $(OutDir)*.lib %25ITILIB%25\
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Arg0.cpp" />
+    <ClCompile Include="Arg1.cpp" />
+    <ClCompile Include="Cfg0.cpp" />
+    <ClCompile Include="Crc0.cpp" />
+    <ClCompile Include="Des0.cpp" />
+    <ClCompile Include="Dir0.cpp" />
+    <ClCompile Include="Dir1.cpp" />
+    <ClCompile Include="Dir2.cpp" />
+    <ClCompile Include="Dir3.cpp" />
+    <ClCompile Include="Dir4.cpp" />
+    <ClCompile Include="Dir5.cpp" />
+    <ClCompile Include="Dir6.cpp" />
+    <ClCompile Include="dir7.cpp" />
+    <ClCompile Include="Fil0.cpp" />
+    <ClCompile Include="Fil1.cpp" />
+    <ClCompile Include="Fil2.cpp" />
+    <ClCompile Include="Fil3.cpp" />
+    <ClCompile Include="Fil4.cpp" />
+    <ClCompile Include="Fil5.cpp" />
+    <ClCompile Include="Grd0.cpp" />
+    <ClCompile Include="Grd1.cpp" />
+    <ClCompile Include="Kbd0.cpp" />
+    <ClCompile Include="Kbd1.cpp" />
+    <ClCompile Include="Mem0.cpp" />
+    <ClCompile Include="Mem1.cpp" />
+    <ClCompile Include="Mem2.cpp" />
+    <ClCompile Include="Mem3.cpp" />
+    <ClCompile Include="Mem4.cpp" />
+    <ClCompile Include="Msc0.cpp" />
+    <ClCompile Include="Msc1.cpp" />
+    <ClCompile Include="Msc2.cpp" />
+    <ClCompile Include="Msc3.cpp" />
+    <ClCompile Include="Msc4.cpp" />
+    <ClCompile Include="Msc5.cpp" />
+    <ClCompile Include="Msc6.cpp" />
+    <ClCompile Include="Mth0.cpp" />
+    <ClCompile Include="Mth1.cpp" />
+    <ClCompile Include="Oldzip.cpp" />
+    <ClCompile Include="rc40.cpp" />
+    <ClCompile Include="Reg0.cpp" />
+    <ClCompile Include="Res0.cpp" />
+    <ClCompile Include="Res1.cpp" />
+    <ClCompile Include="Res2.cpp" />
+    <ClCompile Include="Res3.cpp" />
+    <ClCompile Include="Res4.cpp" />
+    <ClCompile Include="Scr0.cpp" />
+    <ClCompile Include="Scr1.cpp" />
+    <ClCompile Include="Scr2.cpp" />
+    <ClCompile Include="Scr3.cpp" />
+    <ClCompile Include="Scr4.cpp" />
+    <ClCompile Include="Str0.cpp" />
+    <ClCompile Include="Str1.cpp" />
+    <ClCompile Include="Str2.cpp" />
+    <ClCompile Include="Str3.cpp" />
+    <ClCompile Include="Str4.cpp" />
+    <ClCompile Include="Tim0.cpp" />
+    <ClCompile Include="Var0.cpp" />
+    <ClCompile Include="Win0.cpp" />
+    <ClCompile Include="Win1.cpp" />
+    <ClCompile Include="Win2.cpp" />
+    <ClCompile Include="Win3.cpp" />
+    <ClCompile Include="Win4.cpp" />
+    <ClCompile Include="Win5.cpp" />
+    <ClCompile Include="Win7.cpp" />
+    <ClCompile Include="Win8.cpp" />
+    <ClCompile Include="Win9.cpp" />
+    <ClCompile Include="Wina.cpp" />
+    <ClCompile Include="Winb.cpp" />
+    <ClCompile Include="Winc.cpp" />
+    <ClCompile Include="Wind.cpp" />
+    <ClCompile Include="Wine.cpp" />
+    <ClCompile Include="Winf.cpp" />
+    <ClCompile Include="Zip0.cpp" />
+    <ClCompile Include="Zip1.cpp" />
+    <ClCompile Include="Zip2.cpp" />
+    <ClCompile Include="Zip3.cpp" />
+    <ClCompile Include="Zip4.cpp" />
+    <ClCompile Include="Zip5.cpp" />
+    <ClCompile Include="Zip6.cpp" />
+    <ClCompile Include="Zip7.cpp" />
+    <ClCompile Include="Zip8.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arg.h" />
+    <ClInclude Include="Gnuarg.h" />
+    <ClInclude Include="Gnucfg.h" />
+    <ClInclude Include="Gnucrc.h" />
+    <ClInclude Include="Gnudes.h" />
+    <ClInclude Include="Gnudir.h" />
+    <ClInclude Include="Gnufile.h" />
+    <ClInclude Include="Gnugrid.h" />
+    <ClInclude Include="Gnukbd.h" />
+    <ClInclude Include="Gnumath.h" />
+    <ClInclude Include="Gnumem.h" />
+    <ClInclude Include="Gnumisc.h" />
+    <ClInclude Include="gnurc4.h" />
+    <ClInclude Include="Gnureg.h" />
+    <ClInclude Include="Gnures.h" />
+    <ClInclude Include="Gnuscr.h" />
+    <ClInclude Include="Gnustr.h" />
+    <ClInclude Include="Gnutime.h" />
+    <ClInclude Include="Gnutype.h" />
+    <ClInclude Include="Gnuvar.h" />
+    <ClInclude Include="Gnuwin.h" />
+    <ClInclude Include="Gnuzip.h" />
+    <ClInclude Include="Kbd.h" />
+    <ClInclude Include="Mem.h" />
+    <ClInclude Include="Mth.h" />
+    <ClInclude Include="Res.h" />
+    <ClInclude Include="Zip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Explode.obj" />
+    <Object Include="Implode.obj" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
