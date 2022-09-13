@@ -20,6 +20,9 @@
 #include "gnukbd.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -104,3 +107,4 @@ INT GnuMsgBox (PSZ pszHeader, PSZ pszFooter, PSZ pszChars, PSZ pszText)
 	}
 
 
+}

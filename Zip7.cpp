@@ -29,6 +29,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 /*
  * inter-globals for implode/explode sys
@@ -163,3 +166,4 @@ INT Cmp0ExplodeStr (PVOID pDest, INT iDestLen, PVOID pSrc)
 	}
 
 
+}

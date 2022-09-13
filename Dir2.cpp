@@ -21,6 +21,9 @@
 #include "gnumem.h"
 #include "gnudir.h"
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -86,3 +89,4 @@ void DirRemoveEmptyFiles (PSZ pszDir)
 		}
 	}
 
+}

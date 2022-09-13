@@ -20,6 +20,9 @@
 #include "gnumem.h"
 #include "gnureg.h"
 
+extern "C"
+{
+
 PSZ  pszTOKENSTR;           // holds regex string while tokenizing
 INT  iTOKENIDX;             // holds index into pszTOKENSTR while tokenizing
 									 //
@@ -787,3 +790,4 @@ BOOL RegFindReplace (PSZ pszDest, PSZ pszSrc, PSZ pszRegex, PSZ pszResult)
 	return bRet;
 	} 
 
+}

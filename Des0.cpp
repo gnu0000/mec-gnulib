@@ -21,6 +21,10 @@
 #include "gnumem.h"
 #include "gnudes.h"
 
+extern "C"
+{
+
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -556,3 +560,4 @@ PVOID DesBuff (PVOID pDest,
 //   return 0;
 //   }
 
+}

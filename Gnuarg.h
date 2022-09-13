@@ -55,8 +55,10 @@
 #include <GnuType.h>
 #endif
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /* This function sets up what parameters are valid and how they
  * may be specified. This is done in an Argument Definition string
@@ -241,6 +243,8 @@ EXP void ArgClear (void);
  */
 void ArgFreeBlk();
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif // GNUARG_INCLUDED

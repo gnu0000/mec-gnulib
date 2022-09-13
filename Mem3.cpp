@@ -27,6 +27,9 @@
 #include "gnumem.h"
 #include "mem.h"
 
+extern "C"
+{
+
 #define INTERNAL "internal"
 #define PREMARK   0x4D654D21 // !MeM
 #define POSTMARK  0x4D454D21 // !MEM
@@ -458,4 +461,4 @@ PVOID Mem2_freedata(PVOID p, PSZ pszFile, INT iLine)
 	return NULL;
 	}
 
-
+}

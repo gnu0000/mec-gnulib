@@ -17,6 +17,9 @@
 #include "gnuscr.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -126,4 +129,4 @@ INT GnuDrawBox (COORD dwPos, COORD dwSize, PSZ pszBorder, BYTE cAtt)
 	return i;
 	}
 
-
+}

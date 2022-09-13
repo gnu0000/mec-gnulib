@@ -20,6 +20,9 @@
 #include "gnuwin.h"
 
 
+extern "C"
+{
+
 #define MAXLINE 256
 #define BORDERCHRS  "É»È¼ÍÍºº×"
 
@@ -433,3 +436,4 @@ BOOL GnuMoveWin (PGW pgw, INT iYPos, INT iXPos)
 	}
 
 
+}

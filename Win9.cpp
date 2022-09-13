@@ -18,6 +18,9 @@
 #include "gnuscr.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -41,3 +44,4 @@ INT GnuPaintStr (PGW  pgw,      // local window ?
 	return GnuPaint (pgw, iRow, iCol, iJust, wAtt, szOut);
 	}
 
+}

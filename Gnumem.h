@@ -100,8 +100,10 @@
 #include <GnuType.h>
 #endif
  
-
-//extern "C" {
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * Flags for use with MemSetDebugMode (wMode)
@@ -241,8 +243,9 @@ EXP PVOID Mem1_freedata(PVOID p, PSZ pszFile, INT iLine);
 #endif // (MEM_ERRORS)
 
 
-
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 
 #endif  // GNUMEM_INCLUDED

@@ -18,6 +18,9 @@
 #include "gnumem.h"
 #include "gnustr.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -35,3 +38,4 @@ PSZ StrReplace (PPSZ ppszDest, PSZ pszSrc)
 	return *ppszDest;
 	}
 
+}

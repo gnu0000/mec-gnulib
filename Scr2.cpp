@@ -24,6 +24,9 @@
 #include "gnuscr.h"
 
 
+extern "C"
+{
+
 typedef struct _curpos
 	{
 	COORD          dwPos;
@@ -77,3 +80,4 @@ void ScrPopCursor (void)
 	free (pcp);
 	}
 
+}

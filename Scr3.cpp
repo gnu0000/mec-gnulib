@@ -35,6 +35,9 @@
 #include "gnumem.h"
 #include "gnuscr.h"
 
+extern "C"
+{
+
 
 /************************************************************************/
 /*                                                                      */
@@ -190,3 +193,4 @@ void ScrClear (SMALL_RECT rect, CHAR_INFO ciFill)
 //ScrWriteStr    -> ScrWriteStr
 //ScrWriteStrAtt -> ScrWriteStrAtt
 //ScrWriteNCell  -> ScrWriteNChar, ScrWriteNAtt
+}

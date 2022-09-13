@@ -27,7 +27,7 @@
  * BIG  MthGetVariable (PSZ pszName)
  * void MthClearAllVariables ();
  *
- * PSZ  MthFmat (pszNum, bgNum, iWhole, iDec, bCommas, bMoney)
+ * xxx PSZ  MthFmat (pszNum, bgNum, iWhole, iDec, bCommas, bMoney)
  * PSZ  MthFmat (pszNum, bgNum, iWhole, iDec, bCommas, pszMoneySymbol)
  * PSZ  MthFmat2(pszNum, bgNum, iWhole, iDec, bCommas)
  *
@@ -49,6 +49,10 @@
 #endif
 
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 typedef BIG (*PMTHFN) (BIG big);
 
@@ -170,12 +174,14 @@ EXP INT MthMatch (PBIG pbg1, PBIG pbg2);
  * if bMoney is true and number is neg.  Accounting format (parens) is used
  *
  */
-EXP PSZ MthFmat (PSZ  pszNum,  // Return String
-                 BIG  bgNum,   // Number
-                 INT  iWhole,  // # of digits before decimal
-                 INT  iDec,    // # of digits after decimal
-                 BOOL bCommas, // use commas ?
-                 BOOL bMoney); // use leading $ ?
+/*
+ * EXP PSZ MthFmat (PSZ  pszNum,  // Return String
+ *                  BIG  bgNum,   // Number
+ *                  INT  iWhole,  // # of digits before decimal
+ *                  INT  iDec,    // # of digits after decimal
+ *                  BOOL bCommas, // use commas ?
+ *                  BOOL bMoney); // use leading $ ?
+ */
 
 /*
  * This fn formats a number and returns it as a string
@@ -324,6 +330,9 @@ EXP BIG MthSetDirect (PMNODE pmnode, BIG bgVal);
 
 EXP BIG VarVal (PMNODE pmnode);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUMATH_INCLUDED
 

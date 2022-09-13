@@ -22,6 +22,9 @@
 #include "gnukbd.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 
 /************************************************************************/
 /*                                                                      */
@@ -119,3 +122,4 @@ INT GnuComboBox (PPSZ ppsz, INT iY, INT iX, INT iYSize, INT iStartSel)
 	return iRet;
 	}
 
+}

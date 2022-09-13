@@ -15,6 +15,9 @@
 #include "gnutype.h"
 #include "gnucrc.h"
 
+extern "C"
+{
+
 
 #define  MASK  0xA0000001
 
@@ -68,3 +71,4 @@ ULONG CRCBuff (ULONG ulCRC, PVOID pvoid, INT iCount)
 	return ulCRC;
 	}
 
+}

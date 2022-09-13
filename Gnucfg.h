@@ -33,8 +33,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /* This fn returns data from a configuration file in the ini format
  * The pszSection should not have the [] characters.
@@ -131,7 +133,9 @@ EXP INT CfgGetNextSection (FILE *fp, PSZ pszSection, PSZ pszData, INT iMaxLen);
  */
 EXP INT CfgSetLine (PSZ pszFile, PSZ pszSect, PSZ pszLine, PSZ pszVal);
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif // GNUCFG_INCLUDED
 

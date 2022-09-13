@@ -47,8 +47,10 @@
 #endif
 
 
+#ifdef __cplusplus
 extern "C"
 {
+#endif
 
 /*
  * structure which holds the post parsed regular expression
@@ -177,7 +179,9 @@ EXP BOOL _regFindReplace (PSZ pszDest, PSZ pszSrc, PRX prx, PSZ pszResult);
 EXP BOOL _regFindReplace2 (PSZ pszDest, PSZ pszSrc, PRX prx, PSZ pszResult,
                            PINT piStart, PINT piEnd);
 
-} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUREG_INCLUDED
 

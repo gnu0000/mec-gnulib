@@ -24,6 +24,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 static char *ppszZIPERRORS[] = 
 	{
@@ -67,3 +70,4 @@ PSZ CmpGetErr (PCFILE pcfp)
 	}
 
 
+}

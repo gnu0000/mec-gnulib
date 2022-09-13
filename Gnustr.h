@@ -52,8 +52,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * these defines are used with StrCookLine
@@ -292,6 +294,8 @@ EXP PSZ StrReplace (PPSZ ppszDest, PSZ pszSrc);
 EXP PSZ StrBuild (PSZ pszDest, int iParams, PSZ pszFormat, ...);
 
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUSTR_INCLUDED

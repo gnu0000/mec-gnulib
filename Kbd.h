@@ -6,6 +6,10 @@
  *
  */
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 typedef struct _ktrap
    {
@@ -17,5 +21,9 @@ typedef struct _ktrap
    } KTRAP;
 typedef KTRAP *PKTRAP;
 
+
+#ifdef __cplusplus
+}
+#endif
 
 

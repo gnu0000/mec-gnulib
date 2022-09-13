@@ -21,6 +21,9 @@
 #include "gnumem.h"
 #include "gnustr.h"
 
+extern "C"
+{
+
 
 
 /************************************************************************/
@@ -103,3 +106,4 @@ BOOL StrTrue (PSZ psz)
 	return (c == 'T' || c == 'Y'|| c == '1');
 	}
 
+}

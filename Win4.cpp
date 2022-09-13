@@ -21,6 +21,9 @@
 #include "gnuwin.h"
 
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -133,3 +136,4 @@ BOOL GnuDoListKeys (PGW pgw, int cExtKey)
 	return TRUE;
 	}
 
+}

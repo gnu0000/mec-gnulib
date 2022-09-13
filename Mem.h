@@ -6,7 +6,10 @@
  *
  */
 
-
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 WORD memGetDebugMode (void);
 
@@ -16,3 +19,6 @@ INT memErr (PSZ psz, ...);
 
 void memLog (PSZ psz, ...);
 
+#ifdef __cplusplus
+}
+#endif

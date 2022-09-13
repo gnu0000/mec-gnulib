@@ -16,6 +16,9 @@
 #include "gnufile.h"
 
 
+extern "C"
+{
+
 /*
  * Struct for FilPushPos and FilPopPos
  */
@@ -160,3 +163,4 @@ INT FilPeek (FILE *fp)
 	}
 
 
+}

@@ -58,9 +58,10 @@
 #include <GnuType.h>
 #endif
 
-
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * -> Reads a line from fpIn.
@@ -254,7 +255,9 @@ EXP ULONG  FilReadULong (FILE *fp);
 EXP PSZ    FilReadStr (FILE *fp, PSZ psz);
 
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUFILE_INCLUDED
 

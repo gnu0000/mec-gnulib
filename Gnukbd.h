@@ -48,8 +48,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * typedef for fn for the 
@@ -489,11 +491,9 @@ EXP INT ec_EachKey (INT c); /*--- EC_EACHKEY  ---*/
 #define K_AF12  0x18c
 
 
-
-
-
-
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUKBD_INCLUDED
 

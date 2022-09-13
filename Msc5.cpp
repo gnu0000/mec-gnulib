@@ -28,6 +28,9 @@
 #include "gnumem.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 static ULONG ulCOUNTSPERSEC = 0;
 
 
@@ -129,3 +132,5 @@ void DoSleep (ULONG ulTime)
 
 	}
 #pragma optimize ("", on)
+
+}

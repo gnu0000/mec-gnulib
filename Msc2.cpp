@@ -27,6 +27,9 @@
 #include "gnumisc.h"
 
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -43,7 +46,7 @@ BOOL IsFlag (WORD wFlags, int iFlag)
 	}
 
 
-BOOL IsFlag (DWORD dwFlags, int iFlag)
+BOOL IsFlagD (DWORD dwFlags, int iFlag)
 	{
 	return ((dwFlags & (1 << iFlag)) ? 1 : 0);
 	}
@@ -72,7 +75,7 @@ BOOL SetFlag (WORD* pwFlags, int iFlag, BOOL bSet)
 	}
 
 
-BOOL SetFlag (DWORD* pdwFlags, int iFlag, int iSet)
+BOOL SetFlagD (DWORD* pdwFlags, int iFlag, int iSet)
 	{
 	if (iFlag == -1)
 		return !!(*pdwFlags = (USHORT)-1);
@@ -87,7 +90,7 @@ BOOL SetFlag (DWORD* pdwFlags, int iFlag, int iSet)
 	else /*if (bSet == 1)*/               /*--- set bit ---*/
 		*pdwFlags |= (1 << iFlag);
 
-	return IsFlag (*pdwFlags, iFlag);
+	return IsFlagD (*pdwFlags, iFlag);
 	}
 
 
@@ -111,12 +114,13 @@ void FlagList (WORD wFlags, BOOL bInvert, BYTE* pbFlagList)
 			pbFlagList[j++] = i;
 	}
 
-void FlagList (DWORD dwFlags, BOOL bInvert, BYTE* pbFlagList)
+void FlagListD (DWORD dwFlags, BOOL bInvert, BYTE* pbFlagList)
 	{
 	INT i, j;
 
 	memset (pbFlagList, 0xFF, 32);
 	for (i=j=0; i<32; i++)
-		if (!!bInvert == !IsFlag (dwFlags, i))
+		if (!!bInvert == !IsFlagD (dwFlags, i))
 			pbFlagList[j++] = i;
 	}
+}

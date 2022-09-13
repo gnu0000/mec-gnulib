@@ -64,6 +64,9 @@
 #include "gnukbd.h"
 #include "kbd.h"
 
+extern "C"
+{
+
 #define pszDefNormal   "\x1B\x0D"
 
 static PKTRAP EC_pkTRAPS = NULL;
@@ -522,3 +525,4 @@ INT KeyEditCell (PSZ   psz,   // starting string (and return)
 		}
 	}
 
+}

@@ -25,6 +25,9 @@
 #include "gnumem.h"
 #include "mem.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -190,3 +193,4 @@ PVOID  Mem1_freedata(PVOID p, PSZ pszFile, INT iLine)
 	return NULL;
 	}
 
+}

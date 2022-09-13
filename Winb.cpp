@@ -17,6 +17,9 @@
 #include "gnuscr.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 #define szDEFCMAP "\xFE\xFF\x51\x07\xAC\xCB\x98\xFE"
 
@@ -262,3 +265,4 @@ void GnuSetMonoMode (BOOL bMono)
 	{
 	bMONOMODE = bMono;
 	}
+}

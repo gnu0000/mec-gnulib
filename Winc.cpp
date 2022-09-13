@@ -18,6 +18,9 @@
 #include "gnuwin.h"
 
 
+extern "C"
+{
+
 //0   "Screen Background",
 //1   "Screen Selection",
 //2   "Screen Normal Text",
@@ -160,3 +163,4 @@ BOOL GnuSelectColorsWindow2 (PPSZ ppszLabels, PINT piColors)
 		}
 	}
 
+}

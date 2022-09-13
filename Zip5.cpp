@@ -29,6 +29,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 /***********************************************************************/
 /*                                                                     */
@@ -102,3 +105,4 @@ BOOL CmpSetPos (PCFILE pcfp, ULONG ulFilePos)
 	return TRUE;
 	}
 
+}

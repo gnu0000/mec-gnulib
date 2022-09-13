@@ -11,8 +11,6 @@
  *
  */
 
-
-
 #include <string.h>
 #include <stdlib.h>
 #include <io.h>
@@ -23,6 +21,9 @@
 #include "gnufile.h"
 #include "gnustr.h"
 #include "gnucfg.h"
+
+extern "C"
+{
 
 #define MAXSTRINGSIZE 16384
 
@@ -451,3 +452,4 @@ INT CfgSetLine (PSZ pszFile, PSZ pszSect, PSZ pszLine, PSZ pszVal)
 	return 0;
 	}
 
+}

@@ -23,6 +23,9 @@
 #include "gnures.h"
 #include "res.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -147,3 +150,4 @@ INT ResExtract (FILE *fpDest, FILE *fpSrc, PRES pres)
 	return 0;
 	}
 
+}

@@ -23,7 +23,7 @@
  * INT  Range (iMin, iVal, iMax)
  *
  * BOOL IsFlag (WORD wFlags, int iFlag)
- * BOOL IsFlag (DWORD dwFlags, int iFlag)
+ * BOOL IsFlagD (DWORD dwFlags, int iFlag)
  * BOOL SetFlag (WORD* pwFlags, int iFlag, BOOL bSet)
  * BOOL SetFlag (DWORD* pdwFlags, int iFlag, int iSet)
  * void FlagList (WORD wFlags, BOOL bInvert, BYTE* pbFlagList)
@@ -52,13 +52,17 @@
 #include <GnuType.h>
 #endif
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 
 /*
  * checks if a bit has been set
  */
 EXP BOOL IsFlag (WORD wFlags, int iFlag);
-//EXP BOOL IsFlag (DWORD dwFlags, int iFlag);
+EXP BOOL IsFlagD (DWORD dwFlags, int iFlag);
 
 /*
  * sets or clears a flag bit.
@@ -170,6 +174,9 @@ EXP INT Rnd (INT iLimit);
 
 EXP ULONG RandULong (ULONG ulSize);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUMISC_INCLUDED
 

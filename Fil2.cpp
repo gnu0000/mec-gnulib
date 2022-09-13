@@ -15,6 +15,9 @@
 #include "gnufile.h"
 
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -83,3 +86,4 @@ INT FilReadCSVField (FILE *fp, PSZ pszStr, INT iMaxLen, BOOL bLastItem)
 	return 0;
 	}
 
+}

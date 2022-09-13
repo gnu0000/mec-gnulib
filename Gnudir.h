@@ -42,8 +42,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /****************************************************************************
  **                                                                        **
@@ -259,7 +261,9 @@ EXP int DirUnlink (PSZ pszFile);
  */
 EXP BOOL DirGetLongFileName(LPTSTR strLongFileName, LPTSTR strFileName);
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUDIR_INCLUDED
 

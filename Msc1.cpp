@@ -28,6 +28,9 @@
 #include "gnumisc.h"
 
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -82,3 +85,4 @@ INT Range (INT iMin, INT iVal, INT iMax)
 	if (iMax < iVal) return iMax;
 	return iVal;
 	}
+}

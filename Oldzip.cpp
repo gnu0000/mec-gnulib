@@ -22,6 +22,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 #define MASK  0xA0000001
 
@@ -566,4 +569,4 @@ ULONG Cmp2GetCRC  (BOOL bRead)
 //   }
 //
 
-
+}

@@ -19,6 +19,9 @@
 #include "stdafx.h"
 #include "mem.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -142,3 +145,4 @@ PSZ strndup (PSZ psz, INT iLen)
 	pszCpy = (PSZ) malloc (iLen);
 	return (PSZ) memcpy (pszCpy, psz, iLen);
 	}
+}

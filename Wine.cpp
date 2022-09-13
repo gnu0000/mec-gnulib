@@ -22,6 +22,9 @@
 #include "gnukbd.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -115,4 +118,4 @@ WORD WinUsedColorList (PGW pgw, INT iColorsToCheck)
 	return iColorList;
 	}
 
-
+}

@@ -29,6 +29,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 /***********************************************************************/
 /*                                                                     */
@@ -99,3 +102,4 @@ ULONG CmpImplodeFile (PCFILE pcfpOut, FILE *fpIn, PULONG pulReadSize)
 	return ulOutSize;
 	}
 
+}

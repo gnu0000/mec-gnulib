@@ -30,6 +30,8 @@
 #include "gnukbd.h"
 #include "gnumisc.h"
 
+extern "C"
+{
 
 /***************************************************************************/
 /*                                                                         */
@@ -169,3 +171,4 @@ INT GrdComboBox (PVOID pDat,   PPSZ ppszLabels,
 	}
 
 
+}

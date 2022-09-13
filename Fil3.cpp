@@ -19,6 +19,9 @@
 #include "gnufile.h"
 
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -138,3 +141,4 @@ BOOL FilPut4DosDesc (PSZ pszFile, PSZ pszDesc)
 	return TRUE;
 	}
 
+}

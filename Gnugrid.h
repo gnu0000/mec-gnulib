@@ -157,8 +157,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * position struct
@@ -399,6 +401,8 @@ EXP INT GrdComboBox (PVOID pDat,      PPSZ ppszLabels,
                      PSZ   pszHeader, PSZ pszFooter);
 
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif // GNUCRC_INCLUDED

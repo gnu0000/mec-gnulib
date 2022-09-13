@@ -33,6 +33,9 @@
 #include "gnumem.h"
 #include "gnuscr.h"
 
+extern "C"
+{
+
 #if defined (__WATCOMC__)
 #include <graph.h>
 #endif
@@ -246,3 +249,4 @@ BOOL ScrCursorVisible (void)
 	GetConsoleCursorInfo(GetStdHandle (STD_OUTPUT_HANDLE), &CursorInfo);
 	return CursorInfo.bVisible;
 	}
+}

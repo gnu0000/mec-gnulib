@@ -17,6 +17,9 @@
 #include "gnutype.h"
 #include "gnufile.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -79,3 +82,4 @@ INT FilGetc (FILE *fp)
 	return fgetc (fp);
 	}	
 
+}

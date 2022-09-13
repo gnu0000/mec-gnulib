@@ -20,6 +20,9 @@
 #include "res.h"
 
 
+extern "C"
+{
+
 static PSZ ppszResErrors[] = 
 			  {"No Error",                             // 0 
 				"Unable to open Resource File",         // 1 
@@ -303,3 +306,4 @@ void ResSetOpenMode (PSZ pszOpenFlags)
 		iOPENFLAGS = SH_DENYNO;
 	}
 
+}

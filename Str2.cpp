@@ -20,6 +20,9 @@
 #include "gnumisc.h"
 #include "gnustr.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -85,3 +88,4 @@ INT StrGetIdent (PSZ *ppsz,
 //
 //   return uCols;
 //   }
+}

@@ -39,8 +39,10 @@
 #endif
 
 
+#ifdef __cplusplus
 extern "C"
 {
+#endif
 
 #define ADDEXEMARK 0x12488421LU
 
@@ -306,7 +308,9 @@ EXP INT ResStrip (PRES pres, FILE *fpBase);
 EXP void ResSetOpenMode (PSZ pszOpenFlags);
 
 
-} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNURES_INCLUDED
 

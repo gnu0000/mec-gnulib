@@ -20,6 +20,9 @@
 #include "gnuscr.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 #define  MAXLINE 256
 
@@ -255,5 +258,5 @@ INT GnuPaintNChar (PGW  pgw,
 	return GnuPaint (pgw, iRow, iCol, iJust, wAtt, szTmp);
 	}
 
-
+}
 

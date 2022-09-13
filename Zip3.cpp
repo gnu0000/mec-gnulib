@@ -46,6 +46,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 static INT iDEFBLOCKSIZE = 4096;
 
 typedef void (*STATUSPROC) (ULONG ul);
@@ -267,3 +270,4 @@ INT Cmp0ExplodeFile (FILE *fpDest, FILE *fpSrc, PULONG pulDestLen, PULONG pulSrc
 
 /*************************************************************************/
 
+}

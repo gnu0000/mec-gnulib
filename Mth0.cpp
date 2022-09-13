@@ -23,6 +23,9 @@
 #include "gnumath.h"
 
 
+extern "C"
+{
+
 static BIG _Eval (PSZ *ppszExp, INT iLevel);
 
 
@@ -986,3 +989,4 @@ BIG AToBIG (PSZ psz)
 	}
 
 
+}

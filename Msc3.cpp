@@ -25,6 +25,9 @@
 #include "gnumem.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -57,3 +60,4 @@ ULONG RandULong (ULONG ulSize)
 	return ul;
 	}
 
+}

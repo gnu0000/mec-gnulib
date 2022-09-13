@@ -50,6 +50,9 @@
 #include "gnufile.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 /*
  * inter-globals for implode/explode sys
@@ -300,5 +303,5 @@ BOOL _cmpWriteTerm (FILE *fp)
 	}
 
 
-
+}
 

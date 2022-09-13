@@ -23,6 +23,9 @@
 #include "gnumem.h"
 #include "mem.h"
 
+extern "C"
+{
+
 static WORD wFLAGS;
 static FILE *FOUT;
 
@@ -87,3 +90,4 @@ void memLog (PSZ psz, ...)
 	va_end (vlst);
 	fprintf (fpLog, "\n");
 	}
+}

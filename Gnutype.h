@@ -32,9 +32,10 @@
    #define EXP
 #endif
 
-
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * defines to help support different compilers: choices are:
@@ -162,7 +163,9 @@ typedef double        BIG;
 typedef BIG           *PBIG;
 typedef PSZ           *PPSZ;
 
-//H} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif // GNUTYPE_INCLUDED
 

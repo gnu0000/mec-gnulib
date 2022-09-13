@@ -12,10 +12,10 @@ Changes:
 #include <afx.h>
 #include <wchar.h>
 #include <shellapi.h>
-
 #include "gnudir.h"
 
-
+extern "C"
+{
 
 // --- DirGetLongFileName() -----------------------------------------
 // Retrieves the long file name of a file.
@@ -35,3 +35,4 @@ BOOL DirGetLongFileName(LPTSTR strLongFileName, LPTSTR strFileName)
 	return TRUE;
 }
 
+}

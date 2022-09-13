@@ -2,6 +2,8 @@ node_modules/
 build/
 dist/
 bkup/
+Debug/
+Release/
 *.bak
 *.zip
 *.exe

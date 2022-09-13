@@ -21,6 +21,9 @@
 #include "gnures.h"
 #include "res.h"
 
+extern "C"
+{
+
 #define uWORKBUFFSIZE 4096
 
 
@@ -305,3 +308,4 @@ INT ResStrip (PRES pres, FILE *fpBase)
 	return 0;
 	}
 
+}

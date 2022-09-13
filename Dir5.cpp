@@ -11,7 +11,6 @@
  * 
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,6 +19,9 @@
 #include "gnutype.h"
 #include "gnumem.h"
 #include "gnudir.h"
+
+extern "C"
+{
 
 
 /***************************************************************************/
@@ -82,3 +84,4 @@ PSZ DirSplitPath (PSZ pszDest, PSZ pszPath, WORD wFlags)
 
 	return pszDest;
 	}
+}

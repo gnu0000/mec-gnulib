@@ -20,6 +20,9 @@
 #include "mth.h"
 
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -62,44 +65,44 @@ static PSZ AddCommas (PSZ psz)
  * if bMoney is true and number is neg.  Accounting format (parens) is used
  *
  */
-PSZ MthFmat (PSZ  pszNum,  // Return String
-				 BIG  bgNum,   // Number
-				 INT  iWhole,  // # of digits before decimal
-				 INT  iDec,    // # of digits after decimal
-				 BOOL bCommas, // use commas ?
-				 BOOL bMoney)  // use leading $ ?
-	{
-	BIG bgTooBig;
-
-	pszNum[0] = '\0';
-
-	if (!MthValid (bgNum))
-		return pszNum;
-
-	if (!iWhole && (fabs(bgNum) > 9e12 || fabs(bgNum) < -9e12))
-		sprintf (pszNum, "%le", (double) bgNum);
-	else if (!bMoney)
-		sprintf (pszNum, "%1.*lf",  iDec, (double)bgNum);
-	else if (bgNum >= 0)
-		sprintf (pszNum, "$%1.*lf", iDec, (double)bgNum);
-	else
-		sprintf (pszNum, "($%1.*lf)", iDec, (double) fabs (bgNum));
-
-	bgTooBig = pow ((double)10, iWhole);
-
-	/*--- Number does not fit into string ---*/
-	if (iWhole && (bgTooBig <= bgNum || -bgTooBig >= bgNum))
-		{
-		memset (pszNum, '*', iWhole + iDec + 1);
-		pszNum [iWhole + iDec + 1] = '\0';
-		pszNum [iWhole] = '.';
-		}
-
-	if (bCommas)
-		AddCommas (pszNum);
-	return pszNum;
-	}
-
+/* PSZ MthFmat (PSZ  pszNum,  // Return String
+ * 				 BIG  bgNum,   // Number
+ * 				 INT  iWhole,  // # of digits before decimal
+ * 				 INT  iDec,    // # of digits after decimal
+ * 				 BOOL bCommas, // use commas ?
+ * 				 BOOL bMoney)  // use leading $ ?
+ * 	{
+ *  	BIG bgTooBig;
+ * 
+ * 	pszNum[0] = '\0';
+ * 
+ * 	if (!MthValid (bgNum))
+ * 		return pszNum;
+ * 
+ * 	if (!iWhole && (fabs(bgNum) > 9e12 || fabs(bgNum) < -9e12))
+ * 		sprintf (pszNum, "%le", (double) bgNum);
+ * 	else if (!bMoney)
+ * 		sprintf (pszNum, "%1.*lf",  iDec, (double)bgNum);
+ * 	else if (bgNum >= 0)
+ * 		sprintf (pszNum, "$%1.*lf", iDec, (double)bgNum);
+ * 	else
+ * 		sprintf (pszNum, "($%1.*lf)", iDec, (double) fabs (bgNum));
+ * 
+ * 	bgTooBig = pow ((double)10, iWhole);
+ * 
+ * 	--- Number does not fit into string ---
+ * 	if (iWhole && (bgTooBig <= bgNum || -bgTooBig >= bgNum))
+ * 		{
+ * 		memset (pszNum, '*', iWhole + iDec + 1);
+ * 		pszNum [iWhole + iDec + 1] = '\0';
+ * 		pszNum [iWhole] = '.';
+ * 		}
+ * 
+ * 	if (bCommas)
+ * 		AddCommas (pszNum);
+ * 	return pszNum;
+ * 	}
+ */
 
 /*
  * This fn formats a number and returns it as a string
@@ -174,3 +177,4 @@ PSZ MthFmat2  (PSZ  pszNum,  // Return String
 
    return MthFmat (pszNum, bgNum, iWhole, iDec, bCommas, FALSE);
 	}
+}

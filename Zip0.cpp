@@ -31,6 +31,8 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
 
 static BOOL  bINITIALIZED = FALSE;      // System init bool
 static PSZ   pszZIPBUFF   = NULL;       // Buffer used by implode / explode
@@ -155,3 +157,4 @@ BOOL CmpInit (PSZ pszZipBuff, INT iDefType, INT iDefWindow)
 	return TRUE;
 	}
 
+}

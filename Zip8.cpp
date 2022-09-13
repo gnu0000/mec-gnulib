@@ -17,6 +17,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 /*
  * BYTE   CmpReadByte
  * SHORT  CmpReadShort
@@ -115,3 +118,4 @@ BOOL CmpWriteFloat (PCFILE pcfp, BIG bg)
 	}
 
 
+}

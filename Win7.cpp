@@ -25,6 +25,9 @@
 #include "gnuwin.h"
 #include "gnutime.h"
 
+extern "C"
+{
+
 
 static CHAR cCurrDrive  = 0;
 static CHAR szCurrDir [128];
@@ -445,3 +448,4 @@ INT GnuFileWindow (PSZ pszFile,
 	return iType;
 	}
 
+}

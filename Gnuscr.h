@@ -73,8 +73,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /****************************************************************************
  **                                                                        **
@@ -270,7 +272,9 @@ EXP VOID ScrClear (SMALL_RECT rect, CHAR_INFO ciFill);
 EXP INT ScrIncrementColor (INT iModColor, INT iStartColor);
 
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUSCR_INCLUDED
 

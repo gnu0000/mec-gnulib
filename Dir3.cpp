@@ -23,6 +23,9 @@
 #include "gnumem.h"
 #include "gnudir.h"
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -38,3 +41,4 @@ BOOL DirSetFileAtt (PSZ pszFile, INT iAtts)
 #endif
 	}
 
+}

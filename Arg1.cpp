@@ -18,6 +18,9 @@
 #include "arg.h"
 
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -201,3 +204,6 @@ void ArgClear (void)
 		}
 	pinstFree = (PINST) MemFreeData (pinstFree);
 	}
+
+
+}

@@ -17,6 +17,9 @@
 #include "gnumem.h"
 #include "gnuscr.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -99,3 +102,4 @@ INT ScrIncrementColor (INT iModColor, INT iStartColor)
 	}
 
 
+}

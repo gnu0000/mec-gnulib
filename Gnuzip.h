@@ -177,8 +177,10 @@
 #include <GnuType.h>
 #endif
 
-
-
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 
 /*
@@ -888,10 +890,6 @@ EXP PFNX Cmp0GetXlateBuffer (void);
 /*                                                                     */
 /***********************************************************************/
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define CMP_BINARY             0
 #define CMP_ASCII              1
 
@@ -926,8 +924,6 @@ EXP UINT explode(PFReadBuf read_buf,
 #ifdef __cplusplus
 }
 #endif
-
-
 
 #endif  // GNUZIP_INCLUDED
 

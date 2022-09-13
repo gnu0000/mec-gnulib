@@ -14,6 +14,9 @@
 #include "gnutype.h"
 #include "gnumem.h"
 
+extern "C"
+{
+
 #pragma optimize ("egl", off)
 
 
@@ -41,3 +44,4 @@ ULONG MemAvailConv (void)
 	}
 
 #pragma optimize ("", on)
+}

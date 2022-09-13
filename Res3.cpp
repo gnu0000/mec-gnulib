@@ -20,6 +20,9 @@
 #include "gnures.h"
 #include "res.h"
 
+extern "C"
+{
+
 ///*
 // * Undocumented, but still supported
 // * This is used to find the resource file name if one is not
@@ -95,3 +98,4 @@ static BOOL Exists (PSZ psz)
 //   return FALSE;
 //   }
 
+}

@@ -35,6 +35,9 @@
 #include "gnumem.h"
 #include "gnufile.h"
 
+extern "C"
+{
+
 
 static ULONG GLOBALLINE = 1L;
 
@@ -266,6 +269,6 @@ ULONG FilSetLine (ULONG ulGlobalLine)
 	return GLOBALLINE;
 	}
 
-
+}
 
 

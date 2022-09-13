@@ -21,6 +21,9 @@
 #include "gnustr.h"
 #include "gnuvar.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -375,3 +378,4 @@ PVAR VarCopyList (PVAR pvList)
 	return pvNew;
 	}
 
+}

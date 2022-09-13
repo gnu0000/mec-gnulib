@@ -11,6 +11,10 @@
  * Internal header file for GnuMath
  */
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 #define STARTFNS  15
 #define STARTFNS2 0
@@ -55,4 +59,7 @@
 
 void mthInitMath (void);
 
+#ifdef __cplusplus
+}
+#endif
 

@@ -66,6 +66,9 @@
 #include "gnuzip.h"
 #include "zip.h"
 
+extern "C"
+{
+
 
 static INT iWRITETERM = ZIP_NULL;  // End of line terminator id's
 static INT iREADTERM  = ZIP_NULL;  // End of line terminator id's
@@ -589,3 +592,4 @@ BOOL CmpEOS (PCFILE pcfp)
 	{
 	return pcfp->bEOS;
 	}
+}

@@ -29,9 +29,10 @@
 #include <GnuType.h>
 #endif
 
-
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * Des String Encryption
@@ -88,7 +89,9 @@ EXP PVOID DesBuff (PVOID pDest,
                      BOOL  bEncrypt);
 
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUDES_INCLUDED
 

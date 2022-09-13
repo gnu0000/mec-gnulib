@@ -20,6 +20,9 @@
 #include "gnumisc.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -145,3 +148,4 @@ INT GnuHexEdit (PSZ pszBuff, INT iOffset, INT iLines)
 	return 1;
 	}
 
+}

@@ -35,8 +35,10 @@
 #endif
 
 
+#ifdef __cplusplus
 extern "C"
 {
+#endif
 
 /*
  * converts a time_t value into a MM-DD-YY string
@@ -141,7 +143,9 @@ int TimParseTime (PSZ pszTime, PINT piHour, PINT piMin, PINT piSec);
 int TimParseDate (PSZ pszDate, PINT piYear, PINT piMonth, PINT piDay);
 
 
-} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUTIM_INCLUDED
 

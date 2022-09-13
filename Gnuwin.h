@@ -208,9 +208,10 @@
 #endif
 
 
-
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /****************************************************************************
  **                                                                        **
@@ -990,7 +991,9 @@ EXP BOOL  gnuFixScroll (PGW pgw);
 EXP PSZ   gnuGetBorderChars (VOID);
 
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUWIN_INCLUDED
 

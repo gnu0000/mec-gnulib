@@ -1,5 +1,5 @@
 /*
- * Str2.c
+ * Str4.c
  *
  * Craig Fitzgerald  1999
  *
@@ -17,6 +17,9 @@
 #include "gnumem.h"
 #include "gnustr.h"
 
+
+extern "C"
+{
 
 /***************************************************************************/
 /*                                                                         */
@@ -65,3 +68,4 @@ PSZ StrBuild (PSZ pszDest, int iParams, PSZ pszFormat, ...)
 
    return pszDest;
    }
+}

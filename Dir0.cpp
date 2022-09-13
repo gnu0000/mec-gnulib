@@ -21,6 +21,9 @@
 #include "gnudir.h"
 
 
+extern "C"
+{
+
 /*************************************************************************/
 /*                                                                       */
 /* Local support fn's                                                    */
@@ -305,3 +308,4 @@ ULONG DirGetDriveMap (void)
 	}
 
 
+}

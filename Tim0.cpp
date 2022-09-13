@@ -22,6 +22,9 @@
 #include "gnustr.h"
 #include "gnutime.h"
 
+extern "C"
+{
+
 static CHAR *MON[] = {"XXX","Jan","Feb","Mar","Apr","May","Jun",
 					"Jul","Aug","Sep","Oct","Nov","Dec", NULL};
 
@@ -525,3 +528,4 @@ ULONG TimMakeDateTime (PSZ pszDate, PSZ pszTime, BOOL bGMT)
 	}
 
 
+}

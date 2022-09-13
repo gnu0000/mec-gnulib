@@ -21,6 +21,9 @@
 #include "gnumisc.h"
 #include "gnudir.h"
 
+extern "C"
+{
+
 /***************************************************************************/
 /*                                                                         */
 /*                                                                         */
@@ -99,3 +102,4 @@ INT DirChangeDrive (INT iDrive)
 #endif
 	}
 
+}

@@ -25,6 +25,9 @@
 #include "gnumem.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -45,3 +48,4 @@ PSZ GetLastSysError (PINT piErr)
 	return NULL;
 	}
 
+}

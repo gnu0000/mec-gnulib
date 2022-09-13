@@ -23,6 +23,9 @@
 #include "gnutype.h"
 #include "gnurc4.h"
 
+extern "C"
+{
+
 static UCHAR cI, cJ, s[256];
 
 /***************************************************************************/
@@ -72,3 +75,4 @@ PSZ RC4Crypt (PSZ pszOut, PSZ pszIn, int iSrcLen, PSZ pszKey)
 	return RC4CryptStream (pszOut, pszIn, iSrcLen);
 	}
 
+}

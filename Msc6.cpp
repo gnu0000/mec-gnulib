@@ -27,6 +27,9 @@
 #include "gnumem.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -86,3 +89,4 @@ INT GNUBeep (INT iGNUBeep)
 		}
 	return 1;
 	}
+}

@@ -27,13 +27,17 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 EXP ULONG CRC32 (ULONG ulCRC, CHAR c);
 
 EXP ULONG CRCBuff (ULONG ulCRC, PVOID p, INT iCount);
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif // GNUCRC_INCLUDED

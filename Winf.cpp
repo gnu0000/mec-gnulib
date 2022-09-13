@@ -22,6 +22,9 @@
 #include "gnukbd.h"
 #include "gnumisc.h"
 
+extern "C"
+{
+
 
 /************************************************************************/
 /*                                                                      */
@@ -285,3 +288,4 @@ PSZ GnuEditComboBox (PSZ pszDat, PPSZ ppsz,
 	strcpy (pszDat, (*piStartSel == (INT)-1 ? szTmp : ppsz[*piStartSel]));
 	return pszDat;
 	}
+}

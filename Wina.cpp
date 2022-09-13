@@ -19,6 +19,9 @@
 #include "gnumisc.h"
 #include "gnuwin.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -186,4 +189,4 @@ BOOL GnuModifyColorsWindow (void)
 	return (c == K_RET);
 	}
 
-
+}

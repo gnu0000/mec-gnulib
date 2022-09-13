@@ -51,6 +51,10 @@
 #include "gnukbd.h"
 
 
+extern "C"
+{
+
+
 #define GRD_MAXCOLS  256
 
 #define CXSSize(pgw)   (CXSize(pgw)  - ((PGRINFO)pgw->pUser3)->iLeftEdge)
@@ -945,5 +949,5 @@ PGW GrdCreateWin (INT iYSize, INT iXSize, PAINTCELL pfnPaint)
 	return grdFinishCreate (pgw, pfnPaint);
 	}
 
-
+}
 

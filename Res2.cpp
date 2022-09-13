@@ -22,6 +22,9 @@
 #include "gnures.h"
 #include "res.h"
 
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -90,3 +93,4 @@ PVOID ResLoadData2 (PSZ pszResFile, PSZ pszRes, PVOID pBuff, INT iMaxLen, PINT p
 	return pszBuff;
 	}
 
+}

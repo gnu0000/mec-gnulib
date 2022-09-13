@@ -24,6 +24,9 @@
 #include "gnukbd.h"
 #include "kbd.h"
 
+extern "C"
+{
+
 #define RECBUFFSIZE       1024
 
 INT AutoRecordTrapFn (INT c);
@@ -352,3 +355,4 @@ INT LoadKeyBuffTrapFn (INT c)
 	return 0;
 	}
 
+}

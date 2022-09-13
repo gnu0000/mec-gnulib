@@ -39,8 +39,10 @@
 #endif
 
 
-//extern "C"
-//{
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
  * var storage data structure
@@ -157,6 +159,8 @@ EXP BOOL VarEnum (PSZ *ppszVar, PSZ *ppszVal);
 
 EXP PVAR VarCopyList (PVAR pvList);
 
-//} // extern C
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // GNUVAR_INCLUDED

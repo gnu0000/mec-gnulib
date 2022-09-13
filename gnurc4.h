@@ -29,8 +29,10 @@
  */
 
 
+#ifdef __cplusplus
 extern "C"
 {
+#endif
 
 /*
  * Encrypt/Decrypt a block
@@ -54,4 +56,6 @@ EXP PSZ RC4CryptStream (PSZ pszOut, PSZ pszIn, int iSrcLen);
  */
 EXP void RC4InitSBox (PSZ pszKey);
 
-} // extern C
+#ifdef __cplusplus
+}
+#endif

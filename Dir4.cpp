@@ -11,7 +11,6 @@
  * 
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,6 +19,10 @@
 #include "gnutype.h"
 #include "gnumem.h"
 #include "gnudir.h"
+
+extern "C"
+{
+
 
 /***************************************************************************/
 /*                                                                         */
@@ -113,3 +116,4 @@ PSZ DirStripPath (PSZ pszDest, PSZ pszSrc, BOOL bKeepExt)
 	return pszDest;
 	}
 
+}
